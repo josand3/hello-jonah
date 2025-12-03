@@ -5,27 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello, I'm Jonah</title>
     <style>
-      body {
+      * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
         min-height: 100vh;
+        background-color: #000000;
+        color: #00B4D8;
+        font-family: system-ui, -apple-system, sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-family: system-ui, -apple-system, sans-serif;
-        gap: 20px;
+        position: relative;
       }
-      img {
-        max-width: 600px;
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
+      
+      .logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      .logo-icon {
+        display: flex;
+        align-items: flex-end;
+        gap: 3px;
+        height: 24px;
+        position: relative;
+      }
+      
+      .logo-block {
+        background-color: #00B4D8;
+      }
+      
+      .logo-block.small {
+        width: 7px;
+        height: 7px;
+      }
+      
+      .logo-block.tall {
+        width: 7px;
+        height: 20px;
+      }
+      
+      .logo-block-float {
+        position: absolute;
+        right: -4px;
+        top: -6px;
+        width: 6px;
+        height: 6px;
+        background-color: #00B4D8;
+      }
+      
+      .logo-text {
+        font-family: Georgia, serif;
+        font-size: 24px;
+        color: #00B4D8;
+        font-weight: normal;
+        letter-spacing: 0.5px;
+      }
+      
+      h1 {
+        color: #00B4D8;
       }
     </style>
   </head>
   <body>
+    <div class="logo">
+      <div class="logo-icon">
+        <div class="logo-block small"></div>
+        <div class="logo-block tall"></div>
+        <div class="logo-block tall"></div>
+        <div class="logo-block tall"></div>
+        <div class="logo-block small"></div>
+        <div class="logo-block-float"></div>
+      </div>
+      <span class="logo-text">Meridian</span>
+    </div>
     <h1>Hello, I'm Jonah</h1>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Prime_Meridian_Greenwich.jpg/800px-Prime_Meridian_Greenwich.jpg" alt="Prime Meridian at Greenwich, London" />
   </body>
 </html>
